@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import fetchGifs from "../../helpers/fetchGifs";
-import { GiphyGif } from "../../types";
+import { Gif } from "../../types";
 
 interface GifGridProps {
   category: string;
 }
 
 const GifGrid = ({ category }: GifGridProps): React.ReactElement => {
-  const [gifs, setGifs] = useState<GiphyGif[]>([]);
+  const [gifs, setGifs] = useState<Gif[]>([]);
 
   useEffect(() => {
     (async () => {
