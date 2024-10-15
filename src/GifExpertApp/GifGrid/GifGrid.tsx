@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import fetchGifs from "../../helpers/fetchGifs";
 import { Gif } from "../../types";
+import GifItem from "../GifItem/GifItem";
 
 interface GifGridProps {
   category: string;
@@ -18,24 +19,10 @@ const GifGrid = ({ category }: GifGridProps): React.ReactElement => {
 
   return (
     <>
-      <ul>
-        <li>
-          <h3>{category} </h3>
-          <ul>
-            {gifs &&
-              gifs.map((gif) => (
-                <li key={gif.id}>
-                  <img
-                    src={gif.url}
-                    height={gif.height}
-                    width={gif.width}
-                    alt={gif.title}
-                  />
-                </li>
-              ))}
-          </ul>
-        </li>
-      </ul>
+      <h2>{category} </h2>
+      <div className="card-grid">
+        {gifs && gifs.map((gif) => <GifItem key={gif.id} {...gif} />)}
+      </div>
     </>
   );
 };
