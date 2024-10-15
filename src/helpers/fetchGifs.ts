@@ -20,7 +20,6 @@ const fetchGifs = async (input: string): Promise<Gif[]> => {
     return { id, title, height, width, url };
   });
 
-  console.log(gifsData);
   return gifsData;
 };
 
