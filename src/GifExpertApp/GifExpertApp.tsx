@@ -7,11 +7,7 @@ const existingWord = (categories: string[], value: string) =>
   categories.find((category) => category.toLowerCase() === value.toLowerCase());
 
 const GifExpertApp = (): React.ReactElement => {
-  const [categories, setCategories] = useState([
-    "One Piece",
-    "Dragon Ball",
-    "Jujutsu Kaisen",
-  ]);
+  const [categories, setCategories] = useState<string[]>([]);
 
   const onAddCategory = (value: string): void => {
     const newCategory = existingWord(categories, value);

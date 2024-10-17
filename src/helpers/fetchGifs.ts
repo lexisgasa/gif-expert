@@ -4,7 +4,7 @@ const fetchGifs = async (input: string): Promise<Gif[]> => {
   const apiResponse = await fetch(
     `https://api.giphy.com/v1/gifs/search?api_key=${
       import.meta.env.VITE_API_KEY
-    }&q=${input}&limit=15`
+    }&q=${input}&limit=5`
   );
   const { data } = await apiResponse.json();
 

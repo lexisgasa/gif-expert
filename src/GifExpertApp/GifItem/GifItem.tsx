@@ -13,7 +13,7 @@ const GifItem = ({
 }: GifItemProps): React.ReactElement => {
   return (
     <div className="card">
-      <img src={url} height={height} width={width} alt={title} />;
+      <img src={url} height={height} width={width} alt={title} />
     </div>
   );
 };
