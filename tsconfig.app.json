@@ -23,6 +23,7 @@
   "include": [
     "src",
     "02-react/apuntes/04-useState.tsx",
-    "02-react/apuntes/03-star-wars.tsx"
+    "02-react/apuntes/03-star-wars.tsx",
+    "03-GifExpertApp"
   ]
 }
