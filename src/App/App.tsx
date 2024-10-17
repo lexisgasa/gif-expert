@@ -1,7 +1,5 @@
-import GifExpertApp from "../GifExpertApp/GifExpertApp";
-
 const App = (): React.ReactElement => {
-  return <GifExpertApp />;
+  return <h1>Hola mundo</h1>;
 };
 
 export default App;
