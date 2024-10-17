@@ -6,12 +6,13 @@ interface GifGridProps {
 }
 
 const GifGrid = ({ category }: GifGridProps): React.ReactElement => {
-  const { gifs } = useFetchGifs(category);
+  const { gifs, isLoading } = useFetchGifs(category);
 
   return (
     <>
       <h2>{category} </h2>
       <div className="card-grid">
+        {isLoading && <h2>Cargando..</h2>}
         {gifs && gifs.map((gif) => <GifItem key={gif.id} {...gif} />)}
       </div>
     </>
